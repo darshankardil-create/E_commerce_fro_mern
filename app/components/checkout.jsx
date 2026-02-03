@@ -308,7 +308,7 @@ const Page = () => {
         className={`min-h-screen pt-30 ${
           Checkout.checked
             ? "absolute  inset-0 -z-10 h-full w-full items-center px-4 pt-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)] duration-600 lg:pb-0 pb-300"
-            : "relative  inset-0  w-full items-center  bg-white px-2 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] lg:pb-0 pb-300"
+            : "absolute  inset-0  w-full items-center  bg-white px-2 bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] lg:pb-0 pb-300"
         }`}
       >
         {cartempty && (
@@ -414,7 +414,7 @@ const Page = () => {
               alt="no product found"
               className="absolute lg:top-60 lg:left-155 top-60 left-42 "
             />
-            <Link href="https://darshankardil-create.github.io/E_commerce_fro_mern/">
+            <Link href="/">
               <button className="absolute lg:p-10 bg-amber-400 cursor-pointer rounded-[30px] lg:top-120 lg:left-150 text-[20px] font-bold left-40 p-7 top-120  ">
              Start shopping
               </button>
