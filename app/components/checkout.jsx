@@ -473,7 +473,7 @@ const Page = () => {
               Fnal cost including 18% GST : ₹{total18}
             </div>
 
-            <div className="flex gap-13.5 text-bold text-white absolute bottom-130 left-5 lg:bottom-142 lg:gap-23">
+            <div className={`flex gap-13.5 text-bold ${Checkout.checked ? "text-white font-bold"  : "text-black font-bold" } absolute bottom-130 left-5 lg:bottom-142 lg:gap-23`}>
               <div className=" text-center relative left-2.5 lg:left-5 ">Price</div>
               <div className="relative left-1">Items</div>
               <div className=" relative left-2 ">Qty</div>
