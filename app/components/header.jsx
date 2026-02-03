@@ -13,7 +13,6 @@ const Header = ({
   setserchresult,
   checked,
   productsArray,
-  Signinid,
 }) => {
   const [home, sethome] = useState(true);
   const [getback, setgetback] = useState(true);
@@ -27,6 +26,10 @@ const Header = ({
   const focus = useRef();
 
   useEffect(() => {
+
+        setInterval(() => {
+
+  
     function b() {
       const check = localStorage.getItem("Email");
 
@@ -39,7 +42,7 @@ const Header = ({
 
     function a() {
       if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-        //         http://localhost:3001/
+        //        http://localhost:3001/      
         //  if( location.pathname === "/"){
         setgetback(false);
       } else {
@@ -50,7 +53,7 @@ const Header = ({
     a();
 
     if (location.href !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-      //      http://localhost:3001/
+      //     http://localhost:3001/   
       //  if( location.pathname !== "/"){
 
       function b() {
@@ -58,7 +61,10 @@ const Header = ({
       }
       b();
     }
-  }, [Signinid]);
+
+},5000)
+
+  }, []);
 
   useEffect(() => {
     function option() {
@@ -110,7 +116,10 @@ const Header = ({
   useEffect(() => {
     const check = localStorage.getItem("Email");
 
-    if (check) return;
+
+
+ if (check) return;
+
     if (
       location.href ===
         "https://darshankardil-create.github.io/E_commerce_fro_mern/" &&

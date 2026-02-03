@@ -41,7 +41,7 @@ const Page = () => {
           setSigninid(postemail.data.token);
           console.log(postemail);
           location.href =
-            "https://darshankardil-create.github.io/E_comerce_fro_mern/";
+            "https://darshankardil-create.github.io/E_commerce_fro_mern/";
         }
       } catch (error) {
         if (error.response.status === 401) {
