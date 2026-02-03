@@ -414,7 +414,7 @@ const Page = () => {
               alt="no product found"
               className="absolute lg:top-60 lg:left-155 top-60 left-42 "
             />
-            <Link href="https://darshankardil-create.github.io/E_commerce_frontend_mern/">
+            <Link href="https://darshankardil-create.github.io/E_commerce_fro_mern/">
               <button className="absolute lg:p-10 bg-amber-400 cursor-pointer rounded-[30px] lg:top-120 lg:left-150 text-[20px] font-bold left-40 p-7 top-120  ">
              Start shopping
               </button>
