@@ -1,59 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 E_commerce_fro_mern
 
-## Getting Started
+A **full-stack e-commerce web application built with the MERN stack**  
+(**MongoDB, Express.js, React / Next.js, Node.js**).
 
-First, run the development server:
+Focuses on **secure authentication, API rate limiting, dynamic routing, responsive UI, theme management, and production-style frontend–backend separation**.
 
+---
+
+## 🌐 Live Demo
+
+> *(Add frontend deployment link here)*
+
+---
+
+## 🔗 Project Repositories
+
+**Frontend:**  
+👉 https://github.com/darshankardil-create/E_commerce_fro_mern  
+
+**Backend:**  
+👉 https://github.com/darshankardil-create/e_commerce_mern_backend  
+
+---
+
+## 📌 Overview
+
+- **Frontend:** UI rendering, dynamic routing, state management, user interaction  
+- **Backend:** REST APIs, authentication, rate limiting, database operations, business logic  
+- **Highlights:** Theme control, responsive design, dynamic headers, custom search suggestions, detailed checkout info
+
+---
+
+## 🛍️ User Features
+
+### 🔥 High-Value Features
+- **Login / Sign-up pages**  
+- **Dynamic routing:** Product pages, checkout, order tracking, user-specific pages  
+- **Checkout page** with detailed product summary:
+  - Product name
+  - Quantity
+  - Price per item
+  - Total (with and without tax)
+- **Order tracing / history page**
+- **Delete account page**
+- **Custom search suggestions** (beyond basic `<select>` options)
+
+### 🎯 Medium-Value Features
+- **Theme control:** Light/Dark mode toggle  
+- **Theme persistence** on refresh  
+- Responsive design for **mobile & laptop**  
+- Mobile menu to navigate previously mentioned pages easily
+
+### 💡 UX / Interface Enhancements
+- **Headers & elements adapt based on page/location**, showing only what's necessary  
+- **Conditional rendering** to keep UI clean and focused  
+- Minimal, easy-to-use interface
+
+---
+
+## 🔐 Authentication & Security (Backend)
+
+- **Password hashing with bcrypt**  
+- **JWT-based authentication** for protected routes  
+- Middleware protects sensitive endpoints  
+- Secure **account deletion flow**  
+- Environment-based configuration for secrets
+
+---
+
+## 🚦 API Rate Limiting (Upstash Redis)
+
+- Limits requests per user/key  
+- Applied to critical routes:
+  - Authentication
+  - Cart updates
+  - Orders
+- Prevents brute-force attacks & API abuse  
+- Returns `429 Too Many Requests` when limits exceeded  
+
+---
+
+## ⚡ Performance Highlights
+
+- Optimized **cart quantity updates** (debounced)  
+- Conditional rendering keeps UI lightweight  
+- Efficient backend request handling with middleware  
+
+---
+
+## 🧠 Tech Stack
+
+**Frontend**
+- React / Next.js
+- JavaScript (ES6+)
+- CSS / Tailwind CSS
+
+**Backend**
+- Node.js
+- Express.js
+- MongoDB & Mongoose
+- JWT
+- bcrypt
+- Upstash Redis (rate limiting)
+
+---
+
+## 🚀 Getting Started
+
+### Frontend
 ```bash
+git clone https://github.com/darshankardil-create/E_commerce_fro_mern.git
+cd E_commerce_fro_mern
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# fronend_e-commerce_mern
-# time
-# time
-# time
-# time
-# E_commerce_frontend_mern
-# E_commerce_frontend_mern
-# E_commerce_frontend_mern
-# E_commerce_frontend_mern
-# E_commerce_frontend_mern
-# E_commerce_frontend_mernS
-# E_comerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_f_mern
-# E_commerce_fro_mern
-# E_commerce_fro_mern
