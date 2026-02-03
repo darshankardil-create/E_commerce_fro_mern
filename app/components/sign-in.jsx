@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect } from "react";
-import { useState, useContext,useRef } from "react";
+import { useState, useContext, useRef } from "react";
 import axios from "axios";
 import toast from "react-hot-toast";
 import Header from "./../components/header";
@@ -13,30 +13,24 @@ const Page = () => {
   const [form, setform] = useState("");
   const [hide, sethide] = useState("");
 
-
   const { checked } = useContext(Checkoutproduct);
-  const { setSigninid,settraceA } = useContext(Checkoutproduct);
+  const { setSigninid } = useContext(Checkoutproduct);
 
- const empty=useRef()
- const empty2=useRef()
+  const empty = useRef();
+  const empty2 = useRef();
 
   async function postemaildata(e) {
     e.preventDefault();
 
     if (form.trim() === "" || pass.trim() === "") {
-      empty.current.style.borderBottomColor="red"
-      empty2.current.style.borderBottomColor="red"
-
+      empty.current.style.borderBottomColor = "red";
+      empty2.current.style.borderBottomColor = "red";
 
       toast.error("Input Cant be empty all filelds should be filled!");
       return;
     }
 
-
-
     setpostingid(true);
-
-
 
     const cartid = {
       Email: form,
@@ -52,9 +46,9 @@ const Page = () => {
         if (postemail.status === 201) {
           toast.success("Successfully register now you can login");
           setSigninid(postemail.data.token);
-          settraceA(true)
           console.log(postemail);
-          location.href = "https://darshankardil-create.github.io/E_commerce_fro_mern/";
+          location.href =
+            "https://darshankardil-create.github.io/E_commerce_fro_mern/";
         }
       } catch (error) {
         if (
@@ -76,8 +70,6 @@ const Page = () => {
       }
     }
   }
-
-
 
   return (
     <div>
@@ -104,13 +96,12 @@ const Page = () => {
             }
           >
             Sign In Page
-          </div>{" "}
+          </div>
           <div className="  font-[1000] text-yellow-500 text-[40px]">
             {postingid && "Signing you in..."}
           </div>
           <input
             type="email"
-            
             className={
               checked
                 ? "border-b-2 border-b-white w-80 text-white focus:outline-none"
@@ -132,7 +123,6 @@ const Page = () => {
             ref={empty}
           />
           <input
-        
             type="checkbox"
             title="click to show password"
             onChange={(e) =>

@@ -42,10 +42,6 @@ export function CheckoutProductArray({ children }) {
 
 
 
-
-
-
-
   return (
     <Checkoutproduct.Provider
       value={{

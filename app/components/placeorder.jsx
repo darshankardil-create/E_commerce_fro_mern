@@ -32,7 +32,7 @@ const Placeorder = () => {
       <Header />
 
       <ul
-        className={`${checked ? "text-white font-bold" : "text-black font-black"} steps w-350 h-20 absolute top-100`}
+        className={`${checked ? "text-white font-bold" : "text-black font-black"} steps lg:w-350 h-30 w-100 absolute top-100`}
       >
         <li className="step step-primary">Oreder received</li>
         <li className="step step-primary">Above to dispatch</li>
