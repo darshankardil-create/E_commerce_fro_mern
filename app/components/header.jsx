@@ -38,8 +38,8 @@ const Header = ({
     b();
 
     function a() {
-      if (location.href === "http://localhost:3001/") {
-        // https://darshankardil-create.github.io/E_commerce_fro_mern/
+      if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/ ") {
+        //         http://localhost:3001/
         //  if( location.pathname === "/"){
         setgetback(false);
       } else {
@@ -49,8 +49,8 @@ const Header = ({
 
     a();
 
-    if (location.href !== "http://localhost:3001/") {
-      //https://darshankardil-create.github.io/E_commerce_fro_mern/
+    if (location.href !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
+      //      http://localhost:3001/
       //  if( location.pathname !== "/"){
 
       function b() {
