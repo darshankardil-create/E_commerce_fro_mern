@@ -87,8 +87,8 @@ const Page = () => {
         <form
           className={
             checked
-              ? "absolute top-50   border-[4px]  border-white h-120 w-150 rounded-[10px] grid justify-items-center gap-y-10"
-              : "absolute top-50 filter:blur(2px) border-[4px]  border-black h-120 w-150 rounded-[10px] grid justify-items-center gap-y-10"
+              ? "absolute top-50   border-[4px]  border-white lg:h-120 lg:w-150 h-100 w-100 rounded-[10px] grid justify-items-center gap-y-10"
+              : "absolute top-50 filter:blur(2px) border-[4px]  border-black lg:h-120 lg:w-150 h-100 w-100 rounded-[10px] grid justify-items-center gap-y-10"
           }
           onSubmit={(e) => {
             postemaildata(e);
@@ -139,8 +139,8 @@ const Page = () => {
             value="synthwave"
             className={
               checked
-                ? "checkbox theme-controller absolute top-80 right-25 border-white text-white"
-                : "checkbox theme-controller absolute top-80 right-25"
+                ? "checkbox theme-controller absolute lg:top-80 lg:right-25 border-white text-white top-60 right-10"
+                : "checkbox theme-controller absolute lg:top-80 lg:right-25 top-60 right-10"
             }
           />
           <button

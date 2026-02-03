@@ -297,7 +297,7 @@ const Page = () => {
     s();
   }, [array]);
 
-  console.log("Checkout.checked", Checkout.checked);
+  // console.log("Checkout.checked", Checkout.checked);
 
   return (
     <div>
@@ -408,15 +408,15 @@ const Page = () => {
         {gotoshop && (
           <>
             <Image
-              src="/E_commerce_fro_mern/delete.png"
+              src="/E_commerce_fro_mern/delete.png" 
               width={200}
               height={200}
               alt="no product found"
-              className="absolute top-60 left-155 "
+              className="absolute lg:top-60 lg:left-155 top-60 left-42 "
             />
             <Link href="https://darshankardil-create.github.io/E_commerce_frontend_mern/">
-              <button className="absolute p-10 bg-amber-400 cursor-pointer rounded-[30px] top-120 left-150 text-[20px] font-bold">
-                Start Shopping
+              <button className="absolute lg:p-10 bg-amber-400 cursor-pointer rounded-[30px] lg:top-120 lg:left-150 text-[20px] font-bold left-40 p-7 top-120  ">
+             Start shopping
               </button>
             </Link>
           </>

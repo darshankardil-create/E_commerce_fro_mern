@@ -130,8 +130,8 @@ settraceA(check)
       <div
         className={
           checked
-            ? "bg-blue-700 h-15 fixed z-2 top-0 right-0 flex items-center lg:gap-9  duration-200 w-full max-w-120 lg:max-w-600 "
-            : "bg-green-400 h-15 fixed z-2 top-0 right-0 w-full flex items-center lg:gap-9 gap-3 lg:max-w-600  max-w-120"
+            ? "bg-blue-700 h-15 fixed z-2 top-0  flex items-center lg:gap-9  duration-200 w-full max-w-120 lg:max-w-600 left-0 "
+            : "bg-green-400 h-15 fixed z-2 top-0  w-full flex items-center lg:gap-9 gap-3 lg:max-w-600  max-w-120 left-0"
         }
         onClick={() => setArrayop([])}
       >

@@ -45,7 +45,7 @@ const PAGE = () => {
     return result;
   });
 
-  console.log(array30);
+  // console.log(array30);
 
   const [productsArray2, setproductsArray2] = useState([]);
 
@@ -100,7 +100,7 @@ const PAGE = () => {
           }
 
           const jsonbro = await res.json();
-          console.log("vvv", jsonbro, "resraw", res);
+
 
           setemail(jsonbro.data.Email);
 
@@ -352,8 +352,8 @@ const PAGE = () => {
                 <div
                   className={
                     checked
-                      ? "bg-red-600 lg:h-100 lg:w-70 lg:mt-20 w-40 h-60 mb-14 lg:mb-0 rounded-[15px]  hover:scale-110  duration-1000  shadow-[4px_2px_8px] "
-                      : "bg-gray-300 lg:h-100 lg:w-70 lg:mt-20 w-40 h-60 rounded-[15px] mb-14 lg:mb-0 hover:scale-110  duration-1000 shadow-[4px_2px_8px]" //shadow-[xpx_ypx_blur px]
+                      ? "bg-red-600 lg:h-100 lg:w-70 lg:mt-20 w-40 h-60 mb-14 lg:mb-0 rounded-[15px]  lg:hover:scale-110  duration-1000  shadow-[4px_2px_8px] "
+                      : "bg-gray-300 lg:h-100 lg:w-70 lg:mt-20 w-40 h-60 rounded-[15px] mb-14 lg:mb-0 lg:hover:scale-110  duration-1000 shadow-[4px_2px_8px]" //shadow-[xpx_ypx_blur px]
                   }
                 >
                   <div

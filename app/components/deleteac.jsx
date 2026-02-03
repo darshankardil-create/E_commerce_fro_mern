@@ -82,8 +82,8 @@ const Page = () => {
         <form
           className={
             checked
-              ? "absolute top-50  filter:blur(2px) border-4  border-white h-120 w-150 rounded-[10px] grid justify-items-center gap-y-10"
-              : "absolute top-50 filter:blur(2px) border-4  border-black h-120 w-150 rounded-[10px] grid justify-items-center gap-y-10"
+              ? "absolute top-50   border-[4px]  border-white lg:h-120 lg:w-150 h-100 w-100 rounded-[10px] grid justify-items-center gap-y-10"
+              : "absolute top-50 filter:blur(2px) border-[4px]  border-black lg:h-120 lg:w-150 h-100 w-100 rounded-[10px] grid justify-items-center gap-y-10"
           }
           onSubmit={(e) => {
             deleteaccount(e);
@@ -103,8 +103,8 @@ const Page = () => {
             ref={passline}
             className={
               checked
-                ? "border-b-2 border-b-white w-100 text-white focus:outline-none h-10 mt-20"
-                : "border-b-2 border-b-black w-100 h-10 text-black focus:outline-none mt-20"
+                ? "border-b-2 border-b-white lg:w-100 w-75 text-white focus:outline-none h-10 mt-20"
+                : "border-b-2 border-b-black lg:w-100 w-75 h-10 text-black focus:outline-none mt-20"
             }
             placeholder="Enter Your accout Password"
             onChange={(e) => setpass(e.target.value)}
@@ -117,9 +117,9 @@ const Page = () => {
             }
             value="synthwave"
             className={
-              checked
-                ? "checkbox theme-controller absolute top-60 right-15 border-white text-white"
-                : "checkbox theme-controller absolute top-60 right-15 "
+              checked        
+                ? "checkbox theme-controller absolute lg:top-60 lg:right-15 top-50 right-7 border-white text-white"
+                : "checkbox theme-controller absolute lg:top-60 lg:right-15 top-50 right-7 "
             }
           />
           <button
