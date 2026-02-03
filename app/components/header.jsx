@@ -37,7 +37,7 @@ const Header = ({
     b();
 
     function a() {
-      if (location.pathname === "/") {
+      if (location.pathname === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
         setgetback(false);
       } else {
         setgetback(true);
@@ -46,7 +46,7 @@ const Header = ({
 
     a();
 
-    if (location.pathname !== "/") {
+    if (location.pathname !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
       function b() {
         sethideinput(false);
       }
