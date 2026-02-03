@@ -479,10 +479,14 @@ const Page = () => {
               <div className=" relative left-2 ">Qty</div>
               <div className=" relative left-4 ">Tax</div>
             </div>
+<Link href="/route/placeorder">
 
             <button className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5">
               Place order
             </button>
+
+</Link>
+
           </div>
         )}
       </div>

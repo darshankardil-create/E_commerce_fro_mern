@@ -3,6 +3,7 @@ import Checkout from "./../../components/checkout";
 import Login from "./../../components/login";
 import Signin from "./../../components/sign-in";
 import Deleteac from "./../../components/deleteac";
+import PlaceOrn from "./../../components/placeorder"
 
 
 
@@ -35,6 +36,9 @@ const Dynamic_routes = async ({ params }) => {
 
     case "deleteac":
       return <Deleteac />;
+
+     case "placeorder":
+     return <PlaceOrn/> 
 
      default: return <div className="font-[1000] text-[300px] text-center mt-30">Page not found</div> 
   }

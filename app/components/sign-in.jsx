@@ -13,8 +13,9 @@ const Page = () => {
   const [form, setform] = useState("");
   const [hide, sethide] = useState("");
 
+
   const { checked } = useContext(Checkoutproduct);
-  const { setSigninid } = useContext(Checkoutproduct);
+  const { setSigninid,settraceA } = useContext(Checkoutproduct);
 
  const empty=useRef()
  const empty2=useRef()
@@ -51,6 +52,7 @@ const Page = () => {
         if (postemail.status === 201) {
           toast.success("Successfully register now you can login");
           setSigninid(postemail.data.token);
+          settraceA(true)
           console.log(postemail);
           location.href = "https://darshankardil-create.github.io/E_commerce_fro_mern/";
         }

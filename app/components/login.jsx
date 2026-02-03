@@ -13,7 +13,6 @@ const Page = () => {
   const [form, setform] = useState("");
   const [hide, sethide] = useState("");
 
-
   const { setSigninid, checked } = useContext(Checkoutproduct);
 
   async function postemaildata(e) {
@@ -41,7 +40,8 @@ const Page = () => {
           toast.success("Successfully login");
           setSigninid(postemail.data.token);
           console.log(postemail);
-          location.href = "https://darshankardil-create.github.io/E_comerce_fro_mern/";
+          location.href =
+            "https://darshankardil-create.github.io/E_comerce_fro_mern/";
         }
       } catch (error) {
         if (error.response.status === 401) {
@@ -74,11 +74,6 @@ const Page = () => {
         className={` min-h-screen grid justify-items-center h-full w-full ${checked ? "absolute inset-0 -z-10 h-full w-full items-center px-5 py-24 [background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]" : "absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"} `}
       >
         <Header checked={checked} />
-
-  
-
-
-
 
         <form
           className={

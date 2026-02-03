@@ -13,10 +13,11 @@ const Header = ({
   setserchresult,
   checked,
   productsArray,
+  Signinid,
 }) => {
   const [home, sethome] = useState(true);
   const [getback, setgetback] = useState(true);
-  const [traceA, settraceA] = useState(true);
+
   const [hideinput, sethideinput] = useState(true);
 
   const [input, setinput] = useState({ value: "" });
@@ -28,7 +29,7 @@ const Header = ({
   useEffect(() => {
     function b() {
       const check = localStorage.getItem("Email");
-settraceA(check)
+
       if (check) return;
 
       sethome(false);
@@ -36,14 +37,10 @@ settraceA(check)
 
     b();
 
-
-  }, []);
-
-
-  useEffect(() => {
     function a() {
-      if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-    //  if( location.pathname === "/"){
+      if (location.href === "http://localhost:3001/") {
+        // https://darshankardil-create.github.io/E_commerce_fro_mern/
+        //  if( location.pathname === "/"){
         setgetback(false);
       } else {
         setgetback(true);
@@ -52,15 +49,16 @@ settraceA(check)
 
     a();
 
-    if (location.href !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-        //  if( location.pathname !== "/"){
+    if (location.href !== "http://localhost:3001/") {
+      //https://darshankardil-create.github.io/E_commerce_fro_mern/
+      //  if( location.pathname !== "/"){
+
       function b() {
         sethideinput(false);
       }
-
       b();
     }
-  },[traceA])
+  }, [Signinid]);
 
   useEffect(() => {
     function option() {
@@ -113,7 +111,11 @@ settraceA(check)
     const check = localStorage.getItem("Email");
 
     if (check) return;
-    if (location.pathname === "/" && focus.current) {
+    if (
+      location.href ===
+        "https://darshankardil-create.github.io/E_commerce_fro_mern/" &&
+      focus.current
+    ) {
       focus.current.focus();
     }
 
@@ -323,6 +325,10 @@ settraceA(check)
 
           <div className="text-black text-[20px] lg:w-90 ml-5 h-8  w-49.5 text-center border-b-2">
             <Link href="/">🏠 Home page</Link>
+          </div>
+
+          <div className="text-black text-[20px] lg:w-90 ml-5 h-8  w-49.5 text-center border-b-2">
+            <Link href="/route/placeorder">Your orders</Link>
           </div>
         </div>
       </div>

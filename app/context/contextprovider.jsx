@@ -4,32 +4,28 @@ import { Checkoutproduct } from "./context";
 
 export function CheckoutProductArray({ children }) {
   const [addcart, setaddcart] = useState([]);
-  const [checked, setchecked] = useState(true)
+  const [checked, setchecked] = useState(true);
   const [Signinid, setSigninid] = useState("");
   const [tokenid, settokenid] = useState("");
   const [cart, setcart] = useState();
   const [Arrayop, setArrayop] = useState([]);
-    const[menu,setmenu]=useState(false)
-
+  const [menu, setmenu] = useState(false);
 
 
   useEffect(() => {
     const saved = localStorage.getItem("Signinid");
-    const che=localStorage.getItem("checked")
+    const che = localStorage.getItem("checked");
 
     if (saved) {
       function e() {
         console.log("localstorage id of cart", saved);
         setSigninid(saved);
-        if(che) {
-          setchecked(JSON.parse(che))
+        if (che) {
+          setchecked(JSON.parse(che));
         }
-        
       }
       e();
     }
-
-
   }, []);
 
   useEffect(() => {
@@ -38,18 +34,15 @@ export function CheckoutProductArray({ children }) {
     }
   }, [Signinid]); // react runs useeffect ones after 1st render regardless what dependancy array says [] or [cartid] it will still run both at 1st render
 
+  useEffect(() => {
+    if (typeof checked === "boolean") {
+      localStorage.setItem("checked", JSON.stringify(checked));
+    }
+  }, [checked]);
 
 
 
 
-useEffect(() => {
-
-  if(typeof checked === "boolean"){
-localStorage.setItem("checked",JSON.stringify(checked))
-  }
-
-
-},[checked])
 
 
 
@@ -69,7 +62,7 @@ localStorage.setItem("checked",JSON.stringify(checked))
         Arrayop,
         setArrayop,
         setmenu,
-        menu
+        menu,
       }}
     >
       {children}

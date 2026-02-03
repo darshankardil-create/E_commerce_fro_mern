@@ -63,7 +63,8 @@ const Page = () => {
         } else if (data.status === 200) {
           toast.success("Successfully deleted accout");
           setTimeout(() => {
-            location.href = "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in"
+            location.href =
+              "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in";
           }, 500);
         }
       }
@@ -117,7 +118,7 @@ const Page = () => {
             }
             value="synthwave"
             className={
-              checked        
+              checked
                 ? "checkbox theme-controller absolute lg:top-60 lg:right-15 top-50 right-7 border-white text-white"
                 : "checkbox theme-controller absolute lg:top-60 lg:right-15 top-50 right-7 "
             }
