@@ -14,6 +14,7 @@ export async function generateStaticParams() {
     { ways: "login" },
     { ways: "sign-in" },
     { ways: "deleteac" },
+    {ways:"placeorder"}
   ];
 }
 
