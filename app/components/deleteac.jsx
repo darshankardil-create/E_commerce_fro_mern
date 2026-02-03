@@ -63,7 +63,7 @@ const Page = () => {
         } else if (data.status === 200) {
           toast.success("Successfully deleted accout");
           setTimeout(() => {
-            location.href = "https://darshankardil-create.github.io/E_commerce_f_mern/route/sign-in"
+            location.href = "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in"
           }, 500);
         }
       }

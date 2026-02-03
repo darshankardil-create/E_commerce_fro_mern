@@ -41,7 +41,7 @@ const Page = () => {
           toast.success("Successfully login");
           setSigninid(postemail.data.token);
           console.log(postemail);
-          location.href = "https://darshankardil-create.github.io/E_comerce_f_mern/";
+          location.href = "https://darshankardil-create.github.io/E_comerce_fro_mern/";
         }
       } catch (error) {
         if (error.response.status === 401) {

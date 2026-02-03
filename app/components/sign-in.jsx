@@ -52,7 +52,7 @@ const Page = () => {
           toast.success("Successfully register now you can login");
           setSigninid(postemail.data.token);
           console.log(postemail);
-          location.href = "https://darshankardil-create.github.io/E_commerce_f_mern/";
+          location.href = "https://darshankardil-create.github.io/E_commerce_fro_mern/";
         }
       } catch (error) {
         if (
