@@ -318,7 +318,7 @@ const PAGE = () => {
       {/* for center https://docs.google.com/spreadsheets/d/1NuoBKHcd2zvkU354jLiQ5lf_-vOsl3pAK-7MWM78Xr0/edit?gid=1840512337#gid=1840512337 */}
 
       <div
-        className={` grid lg:grid-cols-4 grid-cols-2 justify-items-center py-24 min-h-screen ${!Signinid ? "filter blur-2xl pointer-events-none" : ""}    ${
+        className={` grid lg:grid-cols-4 grid-cols-2 lg:max-w-800 max-w-120 justify-items-center py-24 min-h-screen ${!Signinid ? "filter blur-2xl pointer-events-none" : ""}    ${
           checked
             ? `min-h-screen relative inset-0  w-full items-center [background:radial-gradient(125%_125%_at_50%_50%,#000_30%,#63e_100%)]  ${adding ? "pointer-events-none" : ""}`
             : `min-h-screen relative  inset-0  w-full items-center  bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] ${adding ? "pointer-events-none" : ""} `

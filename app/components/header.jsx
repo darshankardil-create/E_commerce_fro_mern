@@ -38,6 +38,7 @@ const Header = ({
 
     function a() {
       if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
+    //  if( location.pathname === "/"){
         setgetback(false);
       } else {
         setgetback(true);
@@ -47,6 +48,7 @@ const Header = ({
     a();
 
     if (location.href !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
+        //  if( location.pathname !== "/"){
       function b() {
         sethideinput(false);
       }
