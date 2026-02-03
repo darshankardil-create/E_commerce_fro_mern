@@ -1,7 +1,7 @@
 
 
 
-const baseURL="https://e-commerce-mern-backend-cxt8.onrender.com"
+const baseURL="https://e-commerce-mern-backend-cxt8.onrender.com/server"
 
 
 
