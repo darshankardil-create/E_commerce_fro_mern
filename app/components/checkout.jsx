@@ -427,7 +427,7 @@ const Page = () => {
             className={
               Checkout.checked
                 ? "lg:h-150 bg-red-700 lg:w-120  lg:top-40 lg:right-25 lg:fixed  rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140 z-3"
-                : "h-150 bg-amber-50 w-120  top-40 right-25 fixed  rounded-[10px] shadow-[15px_25px_30px]"
+                : "lg:h-150 bg-amber-50 lg:w-120  lg:top-40 lg:right-25 lg:fixed  rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140 z-3"
             }
           >
             <div className=" overflow-y-auto h-70 relative top-10 outline-1 ">
