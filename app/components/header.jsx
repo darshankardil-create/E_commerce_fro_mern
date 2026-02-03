@@ -139,7 +139,7 @@ const Header = ({
         {home === false && <div className="w-60 h-11"></div>}
         {home && hideinput && (
           <input
-            className={`border-2 h-10 lg:w-130 ${getback ? "w-30" : "w-43 ml-3 lg:w-250"} bg-white`}
+            className={`border-2 h-10 lg:w-130 ${getback ? "w-30" : "w-43 ml-3 lg:w-249.5"} bg-white`}
             onChange={(e) => {
               filter();
               setinput({ value: e.target.value });
