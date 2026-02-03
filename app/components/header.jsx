@@ -16,7 +16,7 @@ const Header = ({
 }) => {
   const [home, sethome] = useState(true);
   const [getback, setgetback] = useState(true);
-
+  const [traceA, settraceA] = useState(true);
   const [hideinput, sethideinput] = useState(true);
 
   const [input, setinput] = useState({ value: "" });
@@ -28,7 +28,7 @@ const Header = ({
   useEffect(() => {
     function b() {
       const check = localStorage.getItem("Email");
-
+settraceA(check)
       if (check) return;
 
       sethome(false);
@@ -36,6 +36,11 @@ const Header = ({
 
     b();
 
+
+  }, []);
+
+
+  useEffect(() => {
     function a() {
       if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
     //  if( location.pathname === "/"){
@@ -55,7 +60,7 @@ const Header = ({
 
       b();
     }
-  }, []);
+  },[traceA])
 
   useEffect(() => {
     function option() {
@@ -115,7 +120,7 @@ const Header = ({
     toast(
       "Just give any random email id and password by clicking on SIGN-IN button to keep trace of your products",
       {
-        duration: 6000,
+        duration: 4000,
       },
     );
   }, []);
@@ -125,8 +130,8 @@ const Header = ({
       <div
         className={
           checked
-            ? "bg-blue-700 h-15 fixed z-2 top-0 right-0 w-full flex items-center lg:gap-9 gap-3 duration-200"
-            : "bg-green-400 h-15 fixed z-2 top-0 right-0 w-full flex items-center lg:gap-9 gap-3 "
+            ? "bg-blue-700 h-15 fixed z-2 top-0 right-0 flex items-center lg:gap-9  duration-200 w-full max-w-120 lg:max-w-600 "
+            : "bg-green-400 h-15 fixed z-2 top-0 right-0 w-full flex items-center lg:gap-9 gap-3 lg:max-w-600  max-w-120"
         }
         onClick={() => setArrayop([])}
       >
@@ -204,7 +209,7 @@ const Header = ({
             <Link href="/route/sign-in" onClick={() => setmenu(false)}>
               <button
                 type="submit"
-                className="btn focus:ring-30 focus:ring-green-400"
+                className="btn focus:ring-5 focus:ring-green-500"
                 ref={focus}
               >
                 Sing in

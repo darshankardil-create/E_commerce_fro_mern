@@ -20,7 +20,7 @@ import Header from "./components/header";
 
 const PAGE = () => {
   const [productsArray, setproductsArray] = useState([]);
-  const { addcart, setaddcart, checked, settokenid, tokenid, cart, setcart,setArrayop,setmenu,menu} =
+  const { addcart, setaddcart, checked, settokenid, tokenid, cart, setcart,setArrayop} =
     useContext(Checkoutproduct);
 
 
@@ -84,8 +84,6 @@ const PAGE = () => {
         setSigninid(token);
         async function avoid() {
           console.log("token", token);
-          // setauthentication(false);
-          // setproductmap(true);
 
           const res = await fetch(`${baseURL}/me`, {
             method: "GET",
@@ -443,9 +441,6 @@ element is centered horizontally within its parent.” */}
                     })}
                   </datalist>
                 </div>
-
-
-
               </Fragment>
             );
           })}
