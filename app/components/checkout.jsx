@@ -343,8 +343,8 @@ const Page = () => {
                         list="dl"
                         className={
                           Checkout.checked
-                            ? "outline-3 lg:w-20 lg:h-10 w-12 h-6 rounded-md p-2 relative left-28.5  bottom-7 cursor-pointer z-1 outline-white placeholder-white duration-600 text-white lg:left-60 lg:bottom-10"
-                            : "outline-3 lg:w-20 lg:h-10 w-12 h-6 rounded-md p-2 relative left-28.5  bottom-7 cursor-pointer z-1 lg:left-60 lg:bottom-10"
+                            ? "outline-3 lg:w-20 lg:h-10 w-19 h-6 rounded-md p-2 relative left-28.5  bottom-7 cursor-pointer z-1 outline-white placeholder-white lg:placeholder:text-[18px]  duration-600 text-white lg:left-60 lg:bottom-10 placeholder:text-[15px]"
+                            : "outline-3 lg:w-20 lg:h-10 w-19 h-6 rounded-md p-2 relative left-28.5  bottom-7 cursor-pointer z-1 lg:left-60 lg:bottom-10 placeholder:text-[15px]"
                         }
                         value={proch?.find((p) => p.id === i.id)?.qty || ""}
                         onChange={(e) => {
@@ -369,8 +369,8 @@ const Page = () => {
                       <button
                         className={
                           Checkout.checked
-                            ? "lg:p-3 bg-purple-700  text-white rounded-[15px] relative lg:bottom-37 lg:left-100 cursor-pointer z-1 duration-600 bottom-24 left-45  lg:text-[17px] text-[11px] p-2"
-                            : "lg:p-3 bg-red-700  text-white rounded-[15px] relative lg:bottom-37 lg:left-100 cursor-pointer z-1 duration-600 bottom-24 left-45  lg:text-[17px] text-[11px] p-2 "
+                            ? "lg:p-3 bg-purple-700  text-white rounded-[15px] relative lg:bottom-37 lg:left-100 cursor-pointer z-1 duration-600 bottom-24 left-49  lg:text-[17px] text-[11px] p-2"
+                            : "lg:p-3 bg-red-700  text-white rounded-[15px] relative lg:bottom-37 lg:left-100 cursor-pointer z-1 duration-600 bottom-24 left-49  lg:text-[17px] text-[11px] p-2 "
                         }
                         onClick={() => {
                           removepull(i);
@@ -471,7 +471,7 @@ const Page = () => {
                   : "text-[20px] font-black text-green-600 relative top-20 text-center"
               }
             >
-              Fnal cost including 18% GST : ₹{total18}
+              Final cost including 18% GST : ₹{total18}
             </div>
 
             <div

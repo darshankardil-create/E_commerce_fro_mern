@@ -170,7 +170,7 @@ const Header = ({
         <label
           className={
             checked
-              ? "flex cursor-pointer lg:gap-2 gap-1 text-white"
+              ? "flex cursor-pointer lg:gap-2 gap-1 "
               : "flex cursor-pointer lg:gap-2 gap-1"
           }
         >
