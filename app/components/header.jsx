@@ -38,7 +38,7 @@ const Header = ({
     b();
 
     function a() {
-      if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/ ") {
+      if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
         //         http://localhost:3001/
         //  if( location.pathname === "/"){
         setgetback(false);
