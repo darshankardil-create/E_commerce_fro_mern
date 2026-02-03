@@ -408,7 +408,7 @@ const Page = () => {
         {gotoshop && (
           <>
             <Image
-              src="/E_commerce_fro_mern/delete.png" 
+              src="/E_commerce_fro_mern/image/delete.png" 
               width={200}
               height={200}
               alt="no product found"
