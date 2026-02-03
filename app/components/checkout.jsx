@@ -146,8 +146,6 @@ const Page = () => {
         position: posi,
       };
 
-      location.reload();
-
       const pushfetch = await fetch(`${baseURL}/normalpost/${id}`, {
         method: "POST",
         body: JSON.stringify(data),
@@ -158,10 +156,13 @@ const Page = () => {
 
       const push = await pushfetch.json();
 
-      me();
+      // me()
       console.log("Successfully push data", push);
 
-      toast.success("Successfully updated quatity");
+      if (pushfetch.status === 201) {
+        location.reload();
+        toast.success("Successfully updated quatity");
+      }
     } catch (error) {
       console.log("failed to push data", error);
     }
@@ -408,7 +409,7 @@ const Page = () => {
         {gotoshop && (
           <>
             <Image
-              src="/E_commerce_fro_mern/image/delete.png" 
+              src="/E_commerce_fro_mern/image/delete.png"
               width={200}
               height={200}
               alt="no product found"
@@ -416,7 +417,7 @@ const Page = () => {
             />
             <Link href="/">
               <button className="absolute lg:p-10 bg-amber-400 cursor-pointer rounded-[30px] lg:top-120 lg:left-150 text-[20px] font-bold left-40 p-7 top-120  ">
-             Start shopping
+                Start shopping
               </button>
             </Link>
           </>
@@ -473,20 +474,21 @@ const Page = () => {
               Fnal cost including 18% GST : ₹{total18}
             </div>
 
-            <div className={`flex gap-13.5 text-bold ${Checkout.checked ? "text-white font-bold"  : "text-black font-bold" } absolute bottom-130 left-5 lg:bottom-142 lg:gap-23`}>
-              <div className=" text-center relative left-2.5 lg:left-5 ">Price</div>
+            <div
+              className={`flex gap-13.5 text-bold ${Checkout.checked ? "text-white font-bold" : "text-black font-bold"} absolute bottom-130 left-5 lg:bottom-142 lg:gap-23`}
+            >
+              <div className=" text-center relative left-2.5 lg:left-5 ">
+                Price
+              </div>
               <div className="relative left-1">Items</div>
               <div className=" relative left-2 ">Qty</div>
               <div className=" relative left-4 ">Tax</div>
             </div>
-<Link href="/route/placeorder">
-
-            <button className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5">
-              Place order
-            </button>
-
-</Link>
-
+            <Link href="/route/placeorder">
+              <button className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5">
+                Place order
+              </button>
+            </Link>
           </div>
         )}
       </div>
