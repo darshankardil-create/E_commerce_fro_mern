@@ -1,8 +1,6 @@
-<<<<<<< HEAD
-# 🛒 E_commerce_fro_mern
-=======
+
 # 🛒 E_commerce_frontend_mern
->>>>>>> b96fbbe (lazy-load)
+
 
 A **full-stack e-commerce web application built with the MERN stack**  
 (**MongoDB, Express.js, React / Next.js, Node.js**).
