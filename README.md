@@ -53,7 +53,9 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 - **Theme persistence** on refresh  
 - Responsive design for **mobile & laptop**  
 - Mobile menu to navigate previously mentioned pages easily  
-- **Page lock & blur overlay:** Page becomes non-interactive until the user signs up or logs in if their account is deleted, not found, or doesn’t exist in database
+- **Page lock & blur overlay:** Page becomes non-interactive until the user signs up it even lock's the page if the user's account is deleted, not found, or doesn’t exist in database
+- **Page lock & blur overlay:** The page becomes non-interactive and blurred until the user signs up . It also locks the page if the user's account is deleted, not found, or doesn’t exist in the database.
+ 
 
 
 
