@@ -34,31 +34,6 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ---
 
-## 🛍️ User Features
-
-### 🔥 High-Value Features
-- **Login / Sign-up pages**  
-- **Dynamic routing:** Product pages, checkout, order tracking, user-specific pages  
-- **Checkout page** with detailed product summary:
-  - Product name
-  - Quantity
-  - Price per item
-  - Total (with and without tax)
-- **Order tracing / history page**
-- **Delete account page**
-- **Custom search suggestions** (beyond basic `<select>` options)
-
-### 🎯 Medium-Value Features
-- **Theme control:** Light/Dark mode toggle  
-- **Theme persistence** on refresh  
-- Responsive design for **mobile & laptop**  
-- Mobile menu to navigate previously mentioned pages easily  
-- **Page lock & blur overlay:** Page becomes non-interactive until the user signs up it even lock's the page if the user's account is deleted, not found, or doesn’t exist in database
-- **Page lock & blur overlay:** The page becomes non-interactive and blurred until the user signs up . It also locks the page if the user's account is deleted, not found, or doesn’t exist in the database.
- 
-
-
-
 ### 💡 UX / Interface Enhancements
 - **Headers & elements adapt based on page/location**, showing only what's necessary  
 - **Conditional rendering** to keep UI clean and focused  
@@ -92,7 +67,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ## ⚡ Performance Highlights
 
-- Optimized **cart quantity updates** (debounced)  
+- Optimized **cart quantity updates** (debouncing technique)  
 - Conditional rendering keeps UI lightweight  
 - Efficient backend request handling with middleware  
 
@@ -137,6 +112,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 - **Theme persistence** on refresh  
 - Responsive design for **mobile & laptop**  
 - Mobile menu to navigate previously mentioned pages easily
+- **Page lock & blur overlay:** The page becomes non-interactive and blurred until the user signs up . It also locks the page if the user's account is deleted, not found, or doesn’t exist in the database.
 
 ### 💡 UX / Interface Enhancements
 - **Headers & elements adapt based on page/location**, showing only what's necessary  
