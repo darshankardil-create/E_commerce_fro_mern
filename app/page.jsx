@@ -95,7 +95,9 @@ const PAGE = () => {
               "failed to get id by auth token in get rwq status 404",
             );
 
-            toast.error("account not found please create new account");
+           for(let i=0;i<6;i++){
+             toast.error("account not found please create new account");
+           }
             return;
           }
 
