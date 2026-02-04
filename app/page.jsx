@@ -372,6 +372,7 @@ const PAGE = () => {
                     width={230}
                     src={product.imgsrc}
                     className="mx-auto lg:mt-5 mt-2 lg:h-60 object-cover border-none rounded-lg h-35 w-38 lg:w-65"
+                    loading="lazy"
                   />
 
                   <div className="grid grid-cols-2 lg:gap-3.5 relative left-1 lg:top-1 lg:left-6 top-75 gap-1">

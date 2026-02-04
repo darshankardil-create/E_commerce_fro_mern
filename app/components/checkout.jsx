@@ -412,6 +412,7 @@ const Page = () => {
               src="/E_commerce_fro_mern/image/delete.png"
               width={200}
               height={200}
+              loading="lazy"
               alt="no product found"
               className="absolute lg:top-60 lg:left-155 top-60 left-42 "
             />

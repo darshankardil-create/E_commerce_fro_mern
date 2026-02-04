@@ -131,7 +131,7 @@ const Header = ({
     toast(
       "Just give any random email id and password by clicking on SIGN-IN button to keep trace of your products",
       {
-        duration: 4000,
+        duration: 6000,
       },
     );
   }, []);
@@ -254,6 +254,7 @@ const Header = ({
                 alt="cart"
                 height={100}
                 width={100}
+                loading="lazy"
                 src={"/E_commerce_fro_mern/image/online-shopping.png"} // for build /E_commerce_f_mern
                 className={`cursor-pointer h-12 w-14 absolute top-1.5 ${getback ? "right-25" : "right-14 lg:right-40"} `}
               />

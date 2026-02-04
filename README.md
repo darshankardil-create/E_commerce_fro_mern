@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 # 🛒 E_commerce_fro_mern
+=======
+# 🛒 E_commerce_frontend_mern
+>>>>>>> b96fbbe (lazy-load)
 
 A **full-stack e-commerce web application built with the MERN stack**  
 (**MongoDB, Express.js, React / Next.js, Node.js**).
@@ -29,6 +33,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 - **Backend:** REST APIs, authentication, rate limiting, database operations, business logic  
 - **Highlights:** Theme control, responsive design, dynamic headers, custom search suggestions, detailed checkout info
 
+<<<<<<< HEAD
 ---
 
 ## 🛍️ User Features
@@ -58,6 +63,8 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ---
 
+=======
+>>>>>>> b96fbbe (lazy-load)
 ## 🔐 Authentication & Security (Backend)
 
 - **Password hashing with bcrypt**  
@@ -105,6 +112,38 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ---
 
+<<<<<<< HEAD
+=======
+
+## 🛍️ User Features
+
+### 🔥 High-Value Features
+- **Login / Sign-up pages**  
+- **Dynamic routing:** Product pages, checkout, order tracking, user-specific pages  
+- **Checkout page** with detailed product summary:
+  - Product name
+  - Quantity
+  - Price per item
+  - Total (with and without tax)
+- **Order tracing / history page**
+- **Delete account page**
+- **Custom made search suggestions** (beyond basic `<select>` or `<datalist>` options)
+
+### 🎯 Medium-Value Features
+- **Theme control:** Light/Dark mode toggle  
+- **Theme persistence** on refresh  
+- Responsive design for **mobile & laptop**  
+- Mobile menu to navigate previously mentioned pages easily
+
+### 💡 UX / Interface Enhancements
+- **Headers & elements adapt based on page/location**, showing only what's necessary  
+- **Conditional rendering** to keep UI clean and focused  
+- Minimal, easy-to-use interface
+
+---
+
+
+>>>>>>> b96fbbe (lazy-load)
 ## 🚀 Getting Started
 
 ### Frontend
