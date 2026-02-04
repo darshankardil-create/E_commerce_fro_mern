@@ -96,9 +96,9 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 ## 🧠 Tech Stack
 
 **Frontend**
-- React / Next.js
+- Next.js
 - JavaScript (ES6+)
-- CSS / Tailwind CSS
+- Tailwind CSS
 
 **Backend**
 - Node.js
