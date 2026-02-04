@@ -62,7 +62,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 ---
 
 =======
->>>>>>> b96fbbe (lazy-load)
+
 ## 🔐 Authentication & Security (Backend)
 
 - **Password hashing with bcrypt**  
@@ -110,7 +110,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ---
 
-<<<<<<< HEAD
+
 =======
 
 ## 🛍️ User Features
@@ -141,7 +141,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 ---
 
 
->>>>>>> b96fbbe (lazy-load)
+
 ## 🚀 Getting Started
 
 ### Frontend

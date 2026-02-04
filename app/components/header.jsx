@@ -314,7 +314,7 @@ const Header = ({
       )}
 
       <div
-        className={`duration-700    ${menu ? `min-h-screen ${checked ? "bg-blue-500" : "bg-green-300"} lg:w-100 w-60 fixed top-0 z-1 right-0` : "min-h-screen bg-blue-500 w-0 fixed top-0 z-1 right-0"}`}
+        className={`duration-700    ${menu ? `min-h-screen ${checked ? "bg-blue-500" : "bg-green-300"} lg:w-100 w-60 fixed top-0 z-1 right-0` : "min-h-screen bg-blue-500 w-0 fixed top-0 z-4 right-0"}`}
       >
         <div className="grid grid-cols-1 pt-50 h-130  ">
           <div className="text-black text-[20px] lg:w-90 ml-5 w-49.5 h-8 text-center border-b-2">
