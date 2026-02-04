@@ -69,7 +69,9 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 - Optimized **cart quantity updates** (debouncing technique)  
 - Conditional rendering keeps UI lightweight  
-- Efficient backend request handling with middleware  
+- Efficient backend request handling with middleware
+- **Lazy-loaded images:** Images load only when they enter the viewport, improving performance.
+
 
 ---
 
