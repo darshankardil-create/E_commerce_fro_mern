@@ -13,7 +13,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ## 🌐 Live Demo
 
-> *(Add frontend deployment link here)*
+> *(https://darshankardil-create.github.io/E_commerce_fro_mern/)*
 
 ---
 
@@ -33,7 +33,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 - **Backend:** REST APIs, authentication, rate limiting, database operations, business logic  
 - **Highlights:** Theme control, responsive design, dynamic headers, custom search suggestions, detailed checkout info
 
-<<<<<<< HEAD
+
 ---
 
 ## 🛍️ User Features
