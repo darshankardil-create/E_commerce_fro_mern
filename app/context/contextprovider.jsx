@@ -11,6 +11,7 @@ export function CheckoutProductArray({ children }) {
   const [Arrayop, setArrayop] = useState([]);
   const [menu, setmenu] = useState(false);
    const [placeorder, setplaceorder] = useState(false);
+    const [acnotfn, setacnotfn] = useState(true);
 
 
   useEffect(() => {
@@ -61,7 +62,9 @@ export function CheckoutProductArray({ children }) {
         setmenu,
         menu,
         setplaceorder,
-        placeorder
+        placeorder,
+        acnotfn,
+        setacnotfn
       }}
     >
       {children}

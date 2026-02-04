@@ -16,34 +16,24 @@ const Header = ({
 }) => {
   const [home, sethome] = useState(true);
   const [getback, setgetback] = useState(true);
+  const [singin, setsingin] = useState(false);
 
   const [hideinput, sethideinput] = useState(true);
 
   const [input, setinput] = useState({ value: "" });
-  const { setchecked, setArrayop, Arrayop, setmenu, menu } =
+  const { setchecked, setArrayop, Arrayop, setmenu, menu, acnotfn } =
     useContext(Checkoutproduct);
 
   const focus = useRef();
 
   useEffect(() => {
-
-        setInterval(() => {
-
-  
-    function b() {
-      const check = localStorage.getItem("Email");
-
-      if (check) return;
-
-      sethome(false);
-    }
-
-    b();
-
     function a() {
-      if (location.href === "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-        //        http://localhost:3001/      
-        //  if( location.pathname === "/"){
+      if (
+        location.href ===
+        "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+      ) {
+        //
+        //  if( location.pathname === "/"){  http://localhost:3001/
         setgetback(false);
       } else {
         setgetback(true);
@@ -52,9 +42,12 @@ const Header = ({
 
     a();
 
-    if (location.href !== "https://darshankardil-create.github.io/E_commerce_fro_mern/") {
-      //     http://localhost:3001/   
-      //  if( location.pathname !== "/"){
+    if (
+      location.href !==
+      "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+    ) {
+      //
+      //  if( location.pathname !== "/"){      http://localhost:3001/
 
       function b() {
         sethideinput(false);
@@ -62,9 +55,16 @@ const Header = ({
       b();
     }
 
-},5000)
+    console.log("acnotfn100", acnotfn);
+    if (acnotfn) return;
 
-  }, []);
+    function b() {
+      sethome(false);
+      setsingin(true);
+    }
+
+    b();
+  }, [acnotfn]);
 
   useEffect(() => {
     function option() {
@@ -116,9 +116,7 @@ const Header = ({
   useEffect(() => {
     const check = localStorage.getItem("Email");
 
-
-
- if (check) return;
+    if (check) return;
 
     if (
       location.href ===
@@ -215,7 +213,7 @@ const Header = ({
           </svg>
         </label>
 
-        {!home && (
+        {singin && (
           <>
             <Link href="/route/sign-in" onClick={() => setmenu(false)}>
               <button

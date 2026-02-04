@@ -52,7 +52,10 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 - **Theme control:** Light/Dark mode toggle  
 - **Theme persistence** on refresh  
 - Responsive design for **mobile & laptop**  
-- Mobile menu to navigate previously mentioned pages easily
+- Mobile menu to navigate previously mentioned pages easily  
+- **Page lock & blur overlay:** Page becomes non-interactive until the user signs up or logs in if their account is deleted, not found, or doesn’t exist in database
+
+
 
 ### 💡 UX / Interface Enhancements
 - **Headers & elements adapt based on page/location**, showing only what's necessary  

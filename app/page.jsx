@@ -7,29 +7,31 @@ import { toast } from "react-hot-toast";
 import { useEffect, useState, useContext } from "react";
 import baseURL from "./baseURL";
 
-
-
-
 // import {productsArray} from './product_Array'
 
 import { Checkoutproduct } from "./context/context";
 
 import Header from "./components/header";
 
-
-
 const PAGE = () => {
   const [productsArray, setproductsArray] = useState([]);
-  const { addcart, setaddcart, checked, settokenid, tokenid, cart, setcart,setArrayop} =
-    useContext(Checkoutproduct);
-
-
+  const {
+    addcart,
+    setaddcart,
+    checked,
+    settokenid,
+    tokenid,
+    cart,
+    setcart,
+    setArrayop,
+    acnotfn,
+    setacnotfn,
+  } = useContext(Checkoutproduct);
 
   const [serchresult, setserchresult] = useState("");
 
   const [email, setemail] = useState("");
   const [bool, setbool] = useState(false);
-
 
   const [adding, setadding] = useState(false);
 
@@ -95,14 +97,19 @@ const PAGE = () => {
               "failed to get id by auth token in get rwq status 404",
             );
 
-           for(let i=0;i<6;i++){
-             toast.error("account not found please create new account");
-           }
+            setacnotfn(false);
+
+            for (let i = 0; i < 6; i++) {
+              toast.error("account not found please create new account");
+            }
             return;
           }
 
-          const jsonbro = await res.json();
+          if (res.status === 200) {
+            setacnotfn(true);
+          }
 
+          const jsonbro = await res.json();
 
           setemail(jsonbro.data.Email);
 
@@ -148,8 +155,6 @@ const PAGE = () => {
   useEffect(() => {
     getdbcart();
   }, [tokenid, addcart]);
-
-
 
   const [array, setarray] = useState([]);
 
@@ -224,7 +229,6 @@ const PAGE = () => {
     });
   }
 
-
   console.log("addcart", addcart);
 
   function cartqty() {
@@ -244,7 +248,6 @@ const PAGE = () => {
   async function postdata() {
     if (addcart.length === 0) return;
 
-
     if (tokenid) {
       for (let s of serverarray) {
         if (addcart[addcart.length - 1].id === s.id) {
@@ -253,8 +256,6 @@ const PAGE = () => {
           return;
         }
       }
-
-
 
       try {
         console.log(addcart[addcart.length - 1], "kkk");
@@ -286,16 +287,14 @@ const PAGE = () => {
       } catch (error) {
         console.error("Failed to post cartdata", error);
       } finally {
-       setTimeout(() => {
-           setadding(false);
-       },300)
+        setTimeout(() => {
+          setadding(false);
+        }, 300);
       }
     }
   }
 
   console.log("serverarray", serverarray);
-
-
 
   useEffect(() => {
     if (bool) {
@@ -318,16 +317,13 @@ const PAGE = () => {
       {/* for center https://docs.google.com/spreadsheets/d/1NuoBKHcd2zvkU354jLiQ5lf_-vOsl3pAK-7MWM78Xr0/edit?gid=1840512337#gid=1840512337 */}
 
       <div
-        className={` grid lg:grid-cols-4 grid-cols-2 lg:max-w-800 max-w-120 justify-items-center py-24 min-h-screen ${!Signinid ? "filter blur-2xl pointer-events-none" : ""}    ${
+        className={` grid lg:grid-cols-4 grid-cols-2 lg:max-w-800 max-w-120 justify-items-center py-24 min-h-screen ${Signinid && acnotfn ? "" : "filter blur-2xl pointer-events-none"}    ${
           checked
             ? `min-h-screen relative inset-0  w-full items-center [background:radial-gradient(125%_125%_at_50%_50%,#000_30%,#63e_100%)]  ${adding ? "pointer-events-none" : ""}`
             : `min-h-screen relative  inset-0  w-full items-center  bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem] ${adding ? "pointer-events-none" : ""} `
         }  `}
         onClick={() => setArrayop([])}
       >
-
-
-
         <div
           className={
             checked
@@ -338,10 +334,11 @@ const PAGE = () => {
           {serchresult}
         </div>
 
-
         {reqmany && (
-          <div className=" bg-red-600 w-200 absolute h-30 rounded-[15px] text-[20px] text-white font-black text-center pt-3 "
-          onClick={setArrayop([])}>
+          <div
+            className=" bg-red-600 w-200 absolute h-30 rounded-[15px] text-[20px] text-white font-black text-center pt-3 "
+            onClick={setArrayop([])}
+          >
             <div className="text-[20px] text-white font-black ">ERROR</div>
             Too many request send please try again later
           </div>
@@ -410,7 +407,6 @@ element is centered horizontally within its parent.” */}
                         : "ADD TO CART"}
                     </button>
 
-
                     <input
                       type="number"
                       min={1}
@@ -432,8 +428,6 @@ element is centered horizontally within its parent.” */}
                     />
                   </div>
 
-
-
                   <datalist id="qty">
                     {array30.map((x) => {
                       return (
@@ -448,15 +442,8 @@ element is centered horizontally within its parent.” */}
             );
           })}
       </div>
-
-
     </div>
   );
 };
 
 export default PAGE;
-
-
-
-
-
