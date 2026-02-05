@@ -28,11 +28,6 @@ const PAGE = () => {
     setacnotfn,
   } = useContext(Checkoutproduct);
 
-
-
-
-  
-
   const [serchresult, setserchresult] = useState("");
 
   const [email, setemail] = useState("");
@@ -203,9 +198,7 @@ const PAGE = () => {
     });
   }
 
-
   console.log("dropdown value changed saved to array with obj:", array);
-
 
   const [handleid, sethandleid] = useState();
 
