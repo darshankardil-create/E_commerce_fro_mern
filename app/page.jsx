@@ -198,10 +198,9 @@ const PAGE = () => {
     });
   }
 
-  // useEffect(() => {
+
   console.log("dropdown value changed saved to array with obj:", array);
-  // }, [array]);
-  //no need for useEffect beacause The whole component re-renders automatically with the setexample.
+
 
   const [handleid, sethandleid] = useState();
 

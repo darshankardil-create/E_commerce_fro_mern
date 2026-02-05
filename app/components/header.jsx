@@ -30,10 +30,10 @@ const Header = ({
     function a() {
       if (
         location.href ===
-        "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+ "https://darshankardil-create.github.io/E_commerce_fro_mern/"
       ) {
         //
-        //  if( location.pathname === "/"){  http://localhost:3001/
+        //  if( location.pathname === "/"){        "http://localhost:3001/"    
         setgetback(false);
       } else {
         setgetback(true);
@@ -44,10 +44,10 @@ const Header = ({
 
     if (
       location.href !==
-      "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+   "https://darshankardil-create.github.io/E_commerce_fro_mern/"
     ) {
       //
-      //  if( location.pathname !== "/"){      http://localhost:3001/
+      //  if( location.pathname !== "/"){        "http://localhost:3001/"    
 
       function b() {
         sethideinput(false);
@@ -139,7 +139,7 @@ const Header = ({
       <div
         className={
           checked
-            ? "bg-blue-700 h-15 fixed z-2 top-0  flex items-center lg:gap-9  duration-200 w-full max-w-120 lg:max-w-600 left-0 "
+            ? "bg-blue-700 h-15 fixed z-2 top-0  flex items-center lg:gap-9 gap-3 duration-200 w-full max-w-120 lg:max-w-600 left-0 "
             : "bg-green-400 h-15 fixed z-2 top-0  w-full flex items-center lg:gap-9 gap-3 lg:max-w-600  max-w-120 left-0"
         }
         onClick={() => setArrayop([])}
@@ -155,7 +155,7 @@ const Header = ({
         {home === false && <div className="w-60 h-11"></div>}
         {home && hideinput && (
           <input
-            className={`border-2 h-10 lg:w-130 ${getback ? "w-30" : "w-43 ml-3 lg:w-249.5"} bg-white`}
+            className={`border-2 h-10 lg:w-130 ${getback ? "w-30" : "w-43 ml-3 lg:w-249.5"} text-black bg-white `}
             onChange={(e) => {
               filter();
               setinput({ value: e.target.value });
@@ -270,7 +270,7 @@ const Header = ({
             return (
               <div key={i.id}>
                 <div
-                  className="text-center font-bold hover:bg-amber-300"
+                  className="text-center font-bold hover:bg-amber-300 text-black"
                   onClick={(e) => setinput({ value: e.target.textContent })}
                 >
                   <div

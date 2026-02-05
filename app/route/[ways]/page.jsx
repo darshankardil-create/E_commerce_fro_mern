@@ -25,6 +25,8 @@ export async function generateStaticParams() {
 const Dynamic_routes = async ({ params }) => {
   const slug = await params;
 
+  console.log("slug",slug)
+
   switch (slug.ways) {
     case "checkout":
       return <Checkout />;
