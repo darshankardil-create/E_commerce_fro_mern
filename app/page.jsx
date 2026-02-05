@@ -373,7 +373,7 @@ const PAGE = () => {
                     loading="lazy"
                   />
 
-                  <div className="grid grid-cols-2 lg:gap-3.5 relative left-1 lg:top-1 lg:left-6 top-75 gap-1">
+                  <div className="grid grid-cols-2 lg:gap-3.5 relative left-1 lg:top-1 lg:left-6 gap-1">
                     <div
                       className={
                         checked
