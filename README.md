@@ -3,7 +3,7 @@
 
 
 A **full-stack e-commerce web application built with the MERN stack**  
-(**MongoDB, Express.js, React / Next.js, Node.js**).
+(**MongoDB, Express.js,Next.js, Node.js**).
 
 Focuses on **secure authentication, API rate limiting, dynamic routing, responsive UI, theme management, and production-style frontend–backend separation**.
 
@@ -41,7 +41,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 
 ---
 
-=======
+
 
 ## 🔐 Authentication & Security (Backend)
 
@@ -93,7 +93,7 @@ Focuses on **secure authentication, API rate limiting, dynamic routing, responsi
 ---
 
 
-=======
+
 
 ## 🛍️ User Features
 
