@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     template:"e-commerce-website" 
   },
   description: "Hi my name is darshan and this my e-commerce-website",
-  keywords:["cloths","e-commerse","website"]. //visible in vie page source
+  keywords:["cloths","e-commerse","website"] //visible in vie page source
 };
 
 export default function RootLayout({
