@@ -7,11 +7,11 @@ import { toast } from "react-hot-toast";
 import { useEffect, useState, useContext } from "react";
 import baseURL from "./baseURL";
 
-// import {productsArray} from './product_Array'
 
 import { Checkoutproduct } from "./context/context";
 
 import Header from "./components/header";
+
 
 const PAGE = () => {
   const [productsArray, setproductsArray] = useState([]);
@@ -27,6 +27,7 @@ const PAGE = () => {
     acnotfn,
     setacnotfn,
   } = useContext(Checkoutproduct);
+
 
   const [serchresult, setserchresult] = useState("");
 
@@ -57,9 +58,9 @@ const PAGE = () => {
   }, [email]);
 
   useEffect(() => {
-    const fetch = async () => {
+    async function fetch() {
       try {
-        const res = await axios.get(baseURL); //    "_id:694fb4627d147eb2a01851e9"
+        const res = await axios.get(baseURL);
 
         console.log(res.data.dataforget[0].Allproducts);
         setproductsArray(res.data.dataforget[0].Allproducts);
@@ -72,10 +73,11 @@ const PAGE = () => {
           }
         }
       }
-    };
+    }
 
     fetch();
   }, []);
+
   const [Signinid, setSigninid] = useState("");
 
   useEffect(() => {
@@ -208,7 +210,7 @@ const PAGE = () => {
     setaddcart((prev) => {
       const findinarray = array.find((i) => product.id === i.id);
 
-      const qtyofproandarray = findinarray ? findinarray.qty : 1; // if array obj id and addtocart obj id doest match then set 1
+      const qtyofproandarray = findinarray ? findinarray.qty : 1; 
 
       const find = prev?.find((i) => i.id === product.id);
 
@@ -267,7 +269,7 @@ const PAGE = () => {
           method: "POST",
           body: JSON.stringify(updatecartdata),
           headers: {
-            "Content-Type": "application/json", //auth also inheader  headers: { Authorization: `Bearer ${token}` }
+            "Content-Type": "application/json",
           },
         });
 

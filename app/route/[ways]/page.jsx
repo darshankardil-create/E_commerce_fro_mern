@@ -21,7 +21,6 @@ export async function generateStaticParams() {
 
 
 
-
 const Dynamic_routes = async ({ params }) => {
   const slug = await params;
 
