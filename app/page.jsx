@@ -288,7 +288,7 @@ const PAGE = () => {
       } finally {
         setTimeout(() => {
           setadding(false);
-        }, 600);
+        }, 850);
       }
     }
   }
