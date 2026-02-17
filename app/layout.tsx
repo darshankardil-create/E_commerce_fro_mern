@@ -33,6 +33,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+                                                      {/* any jsx return here will cause it to appear on every page and state is also preserved*/}
         <CheckoutProductArray>
           <Toaster />
           {children}           {/* file:///Users/sanjaykardile/Downloads/React_Context_Explanation.pdf */}

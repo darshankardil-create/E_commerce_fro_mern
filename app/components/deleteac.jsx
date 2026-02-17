@@ -70,6 +70,8 @@ const Page = () => {
       }
     } catch (error) {
       console.log("failed to delete account", error);
+    }finally{
+      setpostingid(false) 
     }
   }
 

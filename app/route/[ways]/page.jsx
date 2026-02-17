@@ -5,9 +5,6 @@ import Signin from "./../../components/sign-in";
 import Deleteac from "./../../components/deleteac";
 import PlaceOrn from "./../../components/placeorder"
 
-
-
-
 export async function generateStaticParams() {
   return [
     { ways: "checkout" },
@@ -17,9 +14,6 @@ export async function generateStaticParams() {
     {ways:"placeorder"}
   ];
 }
-
-
-
 
 const Dynamic_routes = async ({ params }) => {
   const slug = await params;
@@ -40,17 +34,11 @@ const Dynamic_routes = async ({ params }) => {
       return <Deleteac />;
 
      case "placeorder":
-     return <PlaceOrn/> 
+     return <PlaceOrn/>
 
-     default: return <div className="font-[1000] text-[300px] text-center mt-30">Page not found</div> 
+     default: return <div className="font-[1000] text-[300px] text-center mt-30">Page not found</div>
   }
 
- 
 };
 
-
-
-
 export default Dynamic_routes
-
-

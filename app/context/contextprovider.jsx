@@ -10,8 +10,8 @@ export function CheckoutProductArray({ children }) {
   const [cart, setcart] = useState();
   const [Arrayop, setArrayop] = useState([]);
   const [menu, setmenu] = useState(false);
-   const [placeorder, setplaceorder] = useState(false);
-    const [acnotfn, setacnotfn] = useState(true);
+  const [placeorder, setplaceorder] = useState(false);
+  const [acnotfn, setacnotfn] = useState(true);
 
 
   useEffect(() => {
