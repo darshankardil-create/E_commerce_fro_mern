@@ -7,11 +7,9 @@ import { toast } from "react-hot-toast";
 import { useEffect, useState, useContext } from "react";
 import baseURL from "./baseURL";
 
-
 import { Checkoutproduct } from "./context/context";
 
 import Header from "./components/header";
-
 
 const PAGE = () => {
   const [productsArray, setproductsArray] = useState([]);
@@ -28,8 +26,8 @@ const PAGE = () => {
     setacnotfn,
   } = useContext(Checkoutproduct);
 
-
   const [serchresult, setserchresult] = useState("");
+  const [loading, setloading] = useState(true);
 
   const [email, setemail] = useState("");
   const [bool, setbool] = useState(false);
@@ -72,6 +70,8 @@ const PAGE = () => {
             toast.error("Too many request try again later");
           }
         }
+      } finally {
+        setloading(false);
       }
     }
 
@@ -210,7 +210,7 @@ const PAGE = () => {
     setaddcart((prev) => {
       const findinarray = array.find((i) => product.id === i.id);
 
-      const qtyofproandarray = findinarray ? findinarray.qty : 1; 
+      const qtyofproandarray = findinarray ? findinarray.qty : 1;
 
       const find = prev?.find((i) => i.id === product.id);
 
@@ -295,8 +295,6 @@ const PAGE = () => {
 
   console.log("serverarray", serverarray);
 
-
-
   useEffect(() => {
     if (bool) {
       postdata();
@@ -334,6 +332,15 @@ const PAGE = () => {
         >
           {serchresult}
         </div>
+        {loading && (
+          <div className="   text-green-300 absolute">
+            <span className="loading loading-ball loading-xs"></span>
+            <span className="loading loading-ball loading-sm"></span>
+            <span className="loading loading-ball loading-md"></span>
+            <span className="loading loading-ball loading-lg"></span>
+            <span className="loading loading-ball loading-xl"></span>
+          </div>
+        )}
 
         {reqmany && (
           <div

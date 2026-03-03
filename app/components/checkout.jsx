@@ -10,9 +10,9 @@ import useDebouncer from "./../components/hooks";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
 
-
 const Page = () => {
   const [proch, setproch] = useState([]);
+  const [loading, setloading] = useState(true);
 
   const debouncechange = useDebouncer(proch); //just return proch exact value in the form of debouncechange after specified delay
 
@@ -94,6 +94,8 @@ const Page = () => {
         });
       } catch (error) {
         console.log("Failed get in checkkoutpage", error);
+      } finally {
+        setloading(false);
       }
     }
   }
@@ -407,6 +409,16 @@ const Page = () => {
           </div>
         )}
 
+        {loading && (
+          <div className="   text-green-300 absolute top-1/2 right-[50%]">
+            <span className="loading loading-ball loading-xs"></span>
+            <span className="loading loading-ball loading-sm"></span>
+            <span className="loading loading-ball loading-md"></span>
+            <span className="loading loading-ball loading-lg"></span>
+            <span className="loading loading-ball loading-xl"></span>
+          </div>
+        )}
+
         {gotoshop && (
           <>
             <Image
@@ -487,7 +499,10 @@ const Page = () => {
               <div className=" relative left-4 ">Tax</div>
             </div>
             <Link href="/route/placeorder">
-              <button onClick={Checkout.setplaceorder(true)} className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5">
+              <button
+                onClick={() => Checkout.setplaceorder(true)}
+                className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5"
+              >
                 Place order
               </button>
             </Link>
