@@ -409,16 +409,6 @@ const Page = () => {
           </div>
         )}
 
-        {loading && (
-          <div className="   text-green-300 absolute top-1/2 right-[50%]">
-            <span className="loading loading-ball loading-xs"></span>
-            <span className="loading loading-ball loading-sm"></span>
-            <span className="loading loading-ball loading-md"></span>
-            <span className="loading loading-ball loading-lg"></span>
-            <span className="loading loading-ball loading-xl"></span>
-          </div>
-        )}
-
         {gotoshop && (
           <>
             <Image
@@ -435,6 +425,16 @@ const Page = () => {
               </button>
             </Link>
           </>
+        )}
+
+        {loading && (
+          <div className=" text-green-300 absolute top-[25%] lg:top-1/2 right-[50%] ">
+            <span className="loading loading-ball loading-xs"></span>
+            <span className="loading loading-ball loading-sm"></span>
+            <span className="loading loading-ball loading-md"></span>
+            <span className="loading loading-ball loading-lg"></span>
+            <span className="loading loading-ball loading-xl"></span>
+          </div>
         )}
 
         {array.length > 0 > 0 && (
