@@ -6,6 +6,7 @@ import { Checkoutproduct } from "./../context/context";
 import Image from "next/image";
 import toast from "react-hot-toast";
 
+
 const Header = ({
   setproductsArray,
   cart,
@@ -26,14 +27,16 @@ const Header = ({
 
   const focus = useRef();
 
+
   useEffect(() => {
     function a() {
       if (
-        location.href ===
- "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+                location.href ===
+         "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+
       ) {
         //
-        //  if( location.pathname === "/"){        "http://localhost:3001/"    
+        //  if( location.pathname === "/"){        "http://localhost:3001/"
         setgetback(false);
       } else {
         setgetback(true);
@@ -44,10 +47,10 @@ const Header = ({
 
     if (
       location.href !==
-   "https://darshankardil-create.github.io/E_commerce_fro_mern/"
+      "https://darshankardil-create.github.io/E_commerce_fro_mern/"
     ) {
       //
-      //  if( location.pathname !== "/"){        "http://localhost:3001/"    
+      //  if( location.pathname !== "/"){        "http://localhost:3001/"
 
       function b() {
         sethideinput(false);
@@ -139,14 +142,14 @@ const Header = ({
       <div
         className={
           checked
-            ? "bg-blue-700 h-15 fixed z-2 top-0  flex items-center lg:gap-9 gap-3 duration-200 w-full max-w-120 lg:max-w-600 left-0 "
-            : "bg-green-400 h-15 fixed z-2 top-0  w-full flex items-center lg:gap-9 gap-3 lg:max-w-600  max-w-120 left-0"
+            ? "bg-blue-700 h-15 fixed z-2 top-0  flex items-center lg:gap-9 gap-3 duration-200 w-full  left-0 "
+            : "bg-green-400 h-15 fixed z-2 top-0 l flex items-center lg:gap-9 gap-3  left-0  w-full"
         }
         onClick={() => setArrayop([])}
       >
         {getback && (
           <Link href="/">
-            <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl w-23 lg:w-60 h-11 lg:text-[15px] bg-amber-400 font-bold ml-3  border-none lg:ml-10">
+            <button className="btn btn-xs md:text-[11px] text-[11px] sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl w-23 lg:w-60 h-11 lg:text-[15px] bg-amber-400 font-bold ml-3  border-none lg:ml-10">
               GET BACK TO SHOPPING
             </button>
           </Link>
@@ -345,10 +348,3 @@ const Header = ({
 };
 
 export default Header;
-
-
-
-
-
-
-

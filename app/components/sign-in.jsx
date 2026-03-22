@@ -6,6 +6,8 @@ import toast from "react-hot-toast";
 import Header from "./../components/header";
 import { Checkoutproduct } from "./../context/context";
 import baseURL from "./../baseURL";
+import { useRouter } from "next/navigation";
+
 
 const Page = () => {
   const [postingid, setpostingid] = useState(null);
@@ -18,6 +20,7 @@ const Page = () => {
 
   const empty = useRef();
   const empty2 = useRef();
+  const rounting =useRouter()
 
   async function postemaildata(e) {
     e.preventDefault();
@@ -47,9 +50,13 @@ const Page = () => {
           toast.success("Successfully register now you can login");
           setSigninid(postemail.data.token);
           console.log(postemail);
-          location.href =
-            "https://darshankardil-create.github.io/E_commerce_fro_mern/";
+        //   location.href =
+        //     "https://darshankardil-create.github.io/E_commerce_fro_mern/";
+
+                 rounting.replace("/E_commerce_fro_mern")
         }
+
+
       } catch (error) {
         if (
           error.response.status === 400 &&

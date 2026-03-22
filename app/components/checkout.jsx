@@ -441,8 +441,8 @@ const Page = () => {
           <div
             className={
               Checkout.checked
-                ? "lg:h-150 bg-red-700 lg:w-120  lg:top-40 lg:right-25 lg:fixed  rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140 z-3"
-                : "lg:h-150 bg-amber-50 lg:w-120  lg:top-40 lg:right-25 lg:fixed  rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140 z-3"
+                ? "lg:h-150 bg-red-700 md:top-30 md:left-100  lg:w-120  lg:top-40 lg:left-[60%]   rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140"
+                : "lg:h-150 bg-amber-50 lg:w-120 md:top-30 md:left-100  lg:top-40 lg:left-[60%]   rounded-[10px] shadow-[15px_25px_30px] duration-600 absolute bottom-30 w-90 h-140 "
             }
           >
             <div className=" overflow-y-auto h-70 relative top-10 outline-1 ">
@@ -501,7 +501,7 @@ const Page = () => {
             <Link href="/route/placeorder">
               <button
                 onClick={() => Checkout.setplaceorder(true)}
-                className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100 top-30 p-3 w-80 left-5"
+                className="bg-blue-600 hover:bg-blue-800 cursor-pointer relative lg:top-25 lg:left-10 lg:p-4 text-[20px] text-white rounded-[10px] lg:w-100   top-30 p-3 w-80 left-5"
               >
                 Place order
               </button>

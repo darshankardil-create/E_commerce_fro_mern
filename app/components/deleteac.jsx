@@ -4,6 +4,7 @@ import toast from "react-hot-toast";
 import Header from "./../components/header";
 import { Checkoutproduct } from "./../context/context";
 import baseURL from "./../baseURL";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
   const [pass, setpass] = useState("");
@@ -14,6 +15,7 @@ const Page = () => {
   const [email100, setemail100] = useState("");
 
   const passline = useRef();
+const rounting=useRouter()
 
   useEffect(() => {
     const em = localStorage.getItem("Email");
@@ -63,8 +65,9 @@ const Page = () => {
         } else if (data.status === 200) {
           toast.success("Successfully deleted accout");
           setTimeout(() => {
-            location.href =
-              "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in";
+            // location.href =
+            //   "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in";
+            rounting.replace("/E_commerce_fro_mern/route/sign-in")
           }, 500);
         }
       }
