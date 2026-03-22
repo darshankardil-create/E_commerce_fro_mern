@@ -17,7 +17,7 @@ const Page = () => {
 
   const { setSigninid, checked } = useContext(Checkoutproduct);
 
-  const rounting = useRouter
+  const routing = useRouter()
 
   async function postemaildata(e) {
     e.preventDefault();
@@ -46,7 +46,7 @@ const Page = () => {
           console.log(postemail);
           // location.href =
           //   "https://darshankardil-create.github.io/E_commerce_fro_mern/";
-          rounting.replace("/");
+          routing.replace("/");
         }
       } catch (error) {
         if (error.response.status === 401) {
