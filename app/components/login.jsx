@@ -6,7 +6,8 @@ import toast from "react-hot-toast";
 import Header from "./../components/header";
 import { Checkoutproduct } from "./../context/context";
 import baseURL from "./../baseURL";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+
 
 const Page = () => {
   const [postingid, setpostingid] = useState(null);
@@ -16,7 +17,7 @@ const Page = () => {
 
   const { setSigninid, checked } = useContext(Checkoutproduct);
 
-  const rounting = useRouter();
+  const rounting = useRouter
 
   async function postemaildata(e) {
     e.preventDefault();
