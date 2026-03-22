@@ -46,7 +46,7 @@ const Page = () => {
           console.log(postemail);
           // location.href =
           //   "https://darshankardil-create.github.io/E_commerce_fro_mern/";
-          rounting.replace("/E_commerce_fro_mern");
+          rounting.replace("/");
         }
       } catch (error) {
         if (error.response.status === 401) {

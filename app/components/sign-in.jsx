@@ -20,7 +20,7 @@ const Page = () => {
 
   const empty = useRef();
   const empty2 = useRef();
-  const rounting =useRouter()
+  const routing =useRouter()
 
   async function postemaildata(e) {
     e.preventDefault();
@@ -53,7 +53,7 @@ const Page = () => {
         //   location.href =
         //     "https://darshankardil-create.github.io/E_commerce_fro_mern/";
 
-                 rounting.replace("/E_commerce_fro_mern")
+                 routing.replace("/")
         }
 
 

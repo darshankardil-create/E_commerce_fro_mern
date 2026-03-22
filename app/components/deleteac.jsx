@@ -66,8 +66,8 @@ const rounting=useRouter()
           toast.success("Successfully deleted accout");
           setTimeout(() => {
             // location.href =
-            //   "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in";
-            rounting.replace("/E_commerce_fro_mern/route/sign-in")
+            //   "https://darshankardil-create.github.io/E_commerce_fro_mern/route/sign-in"; 
+            rounting.replace("/route/sign-in")
           }, 500);
         }
       }
